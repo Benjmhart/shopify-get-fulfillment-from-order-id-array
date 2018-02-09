@@ -1,22 +1,20 @@
+Welcome!
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+this is a quickly hacked together CLI application to grab a bunch of fulfillment Id's from an array of order Id's
 
+usage:
 
-Welcome to your Node.js project on Cloud9 IDE!
+have node installed
+plug your array into the index.js where indicated
+plug your storename, api key and password into the fetch call
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+from command line: node index.js
 
-## Running the server
+now wait,   this is built to work around the 2 per second limit imposed by shopify,  so you'll see your console crawl through your array and log all the pairs
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
+array[0] will be your order ID
+array[1] will be your fulfillment id
 
-2) Alternatively you can launch the app from the Terminal:
+any errors will be logged directly.
 
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+once you have your results,  cut and paste from your console to wherever you need your data.
